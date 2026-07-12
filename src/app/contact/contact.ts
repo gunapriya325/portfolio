@@ -4,8 +4,8 @@ import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-contact',
-  standalone:true,
-  imports: [FormsModule,Footer],
+  standalone: true,
+  imports: [FormsModule, Footer],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
@@ -25,7 +25,12 @@ Email: ${this.formData.email}
 Message:
 ${this.formData.message}`;
 
-    window.location.href =
-      `mailto:gunapriya138@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const gmailUrl =
+      `https://mail.google.com/mail/u/0/?view=cm&fs=1` +
+      `&to=gunapriya138@gmail.com` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = gmailUrl;
   }
 }

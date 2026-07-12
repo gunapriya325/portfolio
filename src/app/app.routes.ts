@@ -7,6 +7,7 @@ import { Projects } from './projects/projects';
 import { Experience } from './experience/experience';
 import { Contact } from './contact/contact';
 import { Footer } from './footer/footer';
+import { Certificates } from './certificates/certificates';
 
 export const routes: Routes = [
   {
@@ -42,5 +43,9 @@ export const routes: Routes = [
     path: 'contact',
     component: Contact,
   },
+  {
+    path:'certificates',
+    component:Certificates,
+  }
 
 ];
