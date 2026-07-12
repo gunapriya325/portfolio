@@ -6,14 +6,21 @@
     <div class="contact-content">
       <p class="section-label">Get In Touch</p>
 
-      <h1>Let's work together.</h1>
+      <h1>Have a project idea or want to connect?</h1>
 
       <p class="contact-description">
-        Have a project idea or want to connect? Send me a message and I will get back to you.
+        I'm always open to internship opportunities, entry-level software roles, collaboration, and
+        exciting web development projects. Feel free to reach out, and I'll be happy to connect with
+        you.
       </p>
 
       <div class="contact-details">
-        <a href="mailto:gunapriya138@gmail.com" class="contact-info">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=gunapriya138@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-info"
+        >
           <span class="info-icon">✉</span>
           <div>
             <small>Email</small>
@@ -30,7 +37,7 @@
           <span class="info-icon">in</span>
           <div>
             <small>LinkedIn</small>
-            <strong>Connect with me</strong>
+            <strong>Let's Connect</strong>
           </div>
         </a>
 
@@ -43,7 +50,7 @@
           <span class="info-icon">⌘</span>
           <div>
             <small>GitHub</small>
-            <strong>View my projects</strong>
+            <strong>Explore My Projects</strong>
           </div>
         </a>
       </div>
@@ -79,15 +86,13 @@
         <textarea
           id="message"
           name="message"
-          placeholder="Tell me about your project..."
+          placeholder="Tell me about your opportunity, project, or message..."
           [(ngModel)]="formData.message"
           required
         ></textarea>
       </div>
 
-      <button type="submit" class="send-btn">
-        Send Message <span>→</span>
-      </button>
+      <button type="submit" class="send-btn">Send Message <span>→</span></button>
     </form>
   </div>
 </section>

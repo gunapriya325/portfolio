@@ -1,1 +1,43 @@
-<p>certificates works!</p>
+<section class="certificates-section">
+  <div class="cert-glow glow-one"></div>
+  <div class="cert-glow glow-two"></div>
+
+  <div class="certificates-header">
+    <p class="section-label">My Achievements</p>
+    <h1>Certifications, Internships & Technical Learning.</h1>
+    <p>
+      A collection of internships, workshops, and certifications that showcase my continuous
+      learning journey and hands-on experience in Full Stack Web Development, modern web
+      technologies, and real-world software development.
+    </p>
+  </div>
+
+  <div class="certificates-grid">
+    @for (certificate of certificates; track certificate.title; let i = $index) {
+      <article class="certificate-card" [style.--i]="i">
+        <div class="certificate-icon">✦</div>
+
+        <p class="certificate-year">{{ certificate.year }}</p>
+
+        <h2>{{ certificate.title }}</h2>
+        <h3>{{ certificate.organization }}</h3>
+
+        <p class="certificate-description">
+          {{ certificate.description }}
+        </p>
+
+        <div class="certificate-skills">
+          @for (skill of certificate.skills; track skill) {
+            <span>{{ skill }}</span>
+          }
+        </div>
+
+        @if (certificate.link) {
+          <a [href]="certificate.link" target="_blank" rel="noopener noreferrer" class="view-btn">
+            View Certificate <span>↗</span>
+          </a>
+        }
+      </article>
+    }
+  </div>
+</section>

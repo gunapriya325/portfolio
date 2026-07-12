@@ -1,0 +1,213 @@
+.certificates-section {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 125px 8% 70px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(0, 245, 255, 0.11), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(255, 78, 205, 0.12), transparent 34%), #080911;
+}
+
+.certificates-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.section-label {
+  margin: 0 0 12px;
+  color: #00f5ff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.certificates-header h1 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.1;
+  background: linear-gradient(90deg, #ffffff, #00f5ff, #ff4ecd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.certificates-header p:last-child {
+  margin: 0;
+  color: #b8b8c7;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.certificates-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.certificate-card {
+  min-height: 360px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 23px;
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(14px);
+
+  opacity: 0;
+  transform: translateY(35px);
+  animation: cardUp 0.7s ease forwards;
+  animation-delay: calc(var(--i) * 0.15s);
+  transition: 0.35s ease;
+}
+
+.certificate-card::before {
+  content: '';
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: -55px;
+  right: -50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f5ff, #ff4ecd);
+  filter: blur(28px);
+  opacity: 0.24;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 245, 255, 0.48);
+  box-shadow: 0 22px 50px rgba(0, 245, 255, 0.12);
+}
+
+.certificate-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: #071018;
+  background: linear-gradient(135deg, #00f5ff, #ff4ecd);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.25);
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.certificate-year {
+  margin: 0 0 10px;
+  color: #00f5ff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.certificate-card h2 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.certificate-card h3 {
+  margin: 0 0 16px;
+  color: #d5d5df;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.certificate-description {
+  min-height: 75px;
+  margin: 0 0 20px;
+  color: #aaaaba;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.certificate-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.certificate-skills span {
+  padding: 6px 10px;
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  border-radius: 30px;
+  color: #d9f8f9;
+  background: rgba(0, 245, 255, 0.07);
+  font-size: 12px;
+}
+
+.view-btn {
+  color: #00f5ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.view-btn span {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.view-btn:hover {
+  color: #ff4ecd;
+}
+
+.cert-glow {
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+}
+
+.glow-one {
+  top: 20%;
+  left: -150px;
+  background: #00f5ff;
+}
+
+.glow-two {
+  right: -150px;
+  bottom: 12%;
+  background: #ff4ecd;
+}
+
+@keyframes cardUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 950px) {
+  .certificates-section {
+    padding: 115px 6% 60px;
+  }
+
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card {
+    min-height: auto;
+  }
+}

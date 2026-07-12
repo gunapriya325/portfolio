@@ -27,7 +27,9 @@
   aspect-ratio: 1;
   border-radius: 28px;
   padding: 8px;
-  background: linear-gradient(135deg, #00f5ff, #ff4ecd);
+  background-image: url(../assets/priya.jpeg);
+  background-size: cover;
+  background-position: center top;
   position: relative;
   box-shadow: 0 0 45px rgba(0, 245, 255, 0.18);
   animation: floatImage 4s ease-in-out infinite;
