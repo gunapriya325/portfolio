@@ -21,7 +21,7 @@ export class Certificates {
       'Express.js',
       'MongoDB',
     ],
-    link: '',
+    link: 'certificates/angularintern.pdf',
   },
   {
     year: '2025 - 2026',
