@@ -36,7 +36,7 @@ export class Certificates {
       'SQL',
       'NetBeans',
     ],
-    link: '/certificates/cloud-internship.pdf',
+    link: 'certificates/cloud-internship.pdf',
   },
   {
     year: '2024',
@@ -49,7 +49,7 @@ export class Certificates {
       'OOP',
       'Problem Solving',
     ],
-    link: '/certificates/java-workshop.pdf',
+    link: 'certificates/java-workshop.pdf',
   },
 ];
 }
